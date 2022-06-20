@@ -17,7 +17,7 @@ import chat from "../../assets/chat.svg";
 import { useTabs } from "../../contexts/TabsContext";
 
 const Sidebar = () => {
-  const { dispatchTabs } = useTabs();
+  const { dispatchTabs, setcurrentTab, tabs } = useTabs();
 
   return (
     <div className="sidebar">
@@ -85,8 +85,9 @@ const Sidebar = () => {
                 type: "add",
                 payload: { name: "meet" },
               });
+              setcurrentTab(tabs.length );
             }}
-          />
+            />
           <img
             src={calender}
             alt=""
@@ -95,6 +96,7 @@ const Sidebar = () => {
                 type: "add",
                 payload: { name: "calender" },
               });
+              setcurrentTab(tabs.length);
             }}
           />
           <img
@@ -105,6 +107,7 @@ const Sidebar = () => {
                 type: "add",
                 payload: { name: "email" },
               });
+              setcurrentTab(tabs.length );
             }}
           />
           <img
@@ -115,6 +118,7 @@ const Sidebar = () => {
                 type: "add",
                 payload: { name: "chat" },
               });
+              setcurrentTab(tabs.length );
             }}
           />
         </div>
