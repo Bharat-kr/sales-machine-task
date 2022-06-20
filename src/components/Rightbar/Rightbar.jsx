@@ -14,7 +14,7 @@ const Rightbar = ({ open, setOpen }) => {
     <div
       className="rightbar"
       style={{
-        right: open ? "0" : "100%",
+        right: open ? "0" : "-100%",
       }}
     >
       <div className="controls">

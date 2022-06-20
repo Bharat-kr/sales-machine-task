@@ -3,6 +3,7 @@
   border: 1px solid #e4e5e9;
   display: flex;
   flex-direction: column;
+  transition: right 1s ease-in-out;
   .controls {
     border: 1px solid #e4e5e9;
     display: flex;
@@ -75,9 +76,8 @@
   .rightbar {
     position: absolute;
     top: 0;
-    right: 100%;
     height: 100%;
     z-index: 50;
-    background-color:white;
+    background-color: white;
   }
 }
