@@ -15,13 +15,9 @@ import email2 from "../../assets/email2.svg";
 import meet from "../../assets/meet.svg";
 import chat from "../../assets/chat.svg";
 import { useTabs } from "../../contexts/TabsContext";
-import { useEffect } from "react";
 
 const Sidebar = () => {
-  const { tabs, dispatchTabs } = useTabs();
-  useEffect(() => {
-    console.log(tabs);
-  }, [tabs]);
+  const { dispatchTabs } = useTabs();
 
   return (
     <div className="sidebar">
@@ -36,7 +32,7 @@ const Sidebar = () => {
       <div>
         Ringover | <img src={people} alt="" /> 100-200
       </div>
-      <a href="">http://www.ringover.com</a>
+      <a href="http://www.ringover.com">http://www.ringover.com</a>
       <hr />
       <div className="links">
         <img src={linkedin} alt="" />

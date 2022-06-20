@@ -50,7 +50,10 @@ const Main = ({ setOpen }) => {
           <div className="tabname">
             {tabs.map((el, idx) => {
               return (
-                <div className={currentTab === idx ? "tab active" : "tab"}>
+                <div
+                  className={currentTab === idx ? "tab active" : "tab"}
+                  key={idx}
+                >
                   <p
                     onClick={() => {
                       setcurrentTab(idx);
