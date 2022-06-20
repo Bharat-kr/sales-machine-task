@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.scss";
+import Main from "./components/Main/Main";
+import Navbar from "./components/Navbar/Navbar";
+import Rightbar from "./components/Rightbar/Rightbar";
+import Sidebar from "./components/Sidebar/Sidebar";
+import { TabProvider } from "./contexts/TabsContext";
 
 function App() {
+  const [open, setOpen] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TabProvider>
+      <div className="app_wrapper">
+        <Navbar />
+        <div className="container">
+          <Sidebar />
+          <Main setOpen={setOpen} />
+          <Rightbar open={open} setOpen={setOpen} />
+        </div>
+      </div>
+    </TabProvider>
   );
 }
 

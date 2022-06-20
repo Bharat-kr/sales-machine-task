@@ -1,0 +1,9 @@
+.app_wrapper {
+  width: 100vw;
+  height: 100vh;
+  .container {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 3.25rem);
+  }
+}
